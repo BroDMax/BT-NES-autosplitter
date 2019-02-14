@@ -117,7 +117,8 @@ split
     // Bike Glitch
     if ((current.BikeGlitch == 0x0F) && (old.BikeGlitch2 != 0x93) && (current.BikeGlitch2 == 0x93) && (current.level == 3) && (settings["warp2"])) return true;
     // Warps
-    if ((old.warp1 != 0x20) && (current.warp1 == 0x20) && (old.warp2 != 0x05) && (current.warp2 == 0x05))
+    if ((old.warp1 != 0x20) && (current.warp1 == 0x20) && (((old.warp2 != 0x05) && (current.warp2 == 0x05)) ||
+	((old.warp2 != 0x20) && (current.warp2 == 0x20))))
     {
         switch((int)current.level)
         {
