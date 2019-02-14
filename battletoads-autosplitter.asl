@@ -111,7 +111,7 @@ split
     // The Revolution
     if ((current.BikeGlitch == 0x0F) && (old.BikeGlitch2 != 0x93) && (current.BikeGlitch2 == 0x93) && (current.level == 5) && (settings["lvl12"])) return true;
     // Armageddon (end game)
-    if ((old.screen == 0x0F241404) && (current.screen == 0x0F201C0C) && (old.level == 0xFE) && (current.level == 0xFF) && (settings["lvl13"])) return true;
+    if ((old.screen == 0x0F241404) && (current.screen == 0x0F201C0C) && ((current.level == 0xFE) || (current.level == 0xFF)) && (settings["lvl13"])) return true;
     
     
     // Bike Glitch
