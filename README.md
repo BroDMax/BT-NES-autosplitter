@@ -1,6 +1,6 @@
 # Battletoads-NES-autosplitter
 
-The autosplitter for [LiveSplit](https://github.com/LiveSplit/LiveSplit/releases) of game Battletoads US version (NES)
+The autosplitter for [LiveSplit](https://github.com/LiveSplit/LiveSplit/releases) of game Battletoads US and JP version (NES)
 
 ## Required Emulators
 - [x] FCEUX v2.2.3 [Download](http://www.fceux.com/web/download.html)
