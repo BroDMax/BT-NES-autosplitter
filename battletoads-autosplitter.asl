@@ -2,39 +2,91 @@ state("fceux")
 {
     byte level:         0x3B1388, 0x0010;
     byte start:         0x3B1388, 0x03B5;
+    byte start2:        0x3B1388, 0x03B6;
     byte complete:      0x3B1388, 0x0033;
     byte pauseComplete: 0x3B1388, 0x00EB;
-    byte warp1:         0x3B1388, 0x0066;
-    byte warp2:         0x3B1388, 0x006A;
     byte BikeGlitch:    0x3B1388, 0x0650;
     byte BikeGlitch2:   0x3B1388, 0x0318;
     uint screen:        0x3B1388, 0x005A;
+    uint warpScreen:    0x3B1388, 0x006A;
 }
 
 state("nestopia")
 {
     byte level:         "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x78;
     byte start:         "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x41D;
+    byte start2:        "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x41E;
     byte complete:      "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x9B;
     byte pauseComplete: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x153;
-    byte warp1:         "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0xCE;
-    byte warp2:         "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0xD2;
     byte BikeGlitch:    "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x6B8;
     byte BikeGlitch2:   "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x380;
     uint screen:        "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0xC2;
+    uint warpScreen:    "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0xD2;
 }
 
 state("mednafen")
 {
     byte level:         "mednafen.exe", 0xBE1CF0;
     byte start:         "mednafen.exe", 0xBE2095;
+    byte start2:        "mednafen.exe", 0xBE2096;
     byte complete:      "mednafen.exe", 0xBE1D13;
     byte pauseComplete: "mednafen.exe", 0xBE1DCB;
-    byte warp1:         "mednafen.exe", 0xBE1D46;
-    byte warp2:         "mednafen.exe", 0xBE1D4A;
     byte BikeGlitch:    "mednafen.exe", 0xBE2330;
     byte BikeGlitch2:   "mednafen.exe", 0xBE1FF8;
     uint screen:        "mednafen.exe", 0xBE1D3A;
+    uint warpScreen:    "mednafen.exe", 0xBE1D4A;
+}
+
+state("punes32")
+{
+    byte level:         "punes32.exe", 0xDDC8, 0x0010;
+    byte start:         "punes32.exe", 0xDDC8, 0x03B5;
+    byte start2:        "punes32.exe", 0xDDC8, 0x03B6;
+    byte complete:      "punes32.exe", 0xDDC8, 0x0033;
+    byte pauseComplete: "punes32.exe", 0xDDC8, 0x00EB;
+    byte BikeGlitch:    "punes32.exe", 0xDDC8, 0x0650;
+    byte BikeGlitch2:   "punes32.exe", 0xDDC8, 0x0318;
+    uint screen:        "punes32.exe", 0xDDC8, 0x005A;
+    uint warpScreen:    "punes32.exe", 0xDDC8, 0x006A;
+}
+
+state("punes64")
+{
+    byte level:         0x13F1710;
+    byte start:         0x13F1AB5;
+    byte start2:        0x13F1AB6;
+    byte complete:      0x13F1733;
+    byte pauseComplete: 0x13F17EB;
+    byte BikeGlitch:    0x13F1D50;
+    byte BikeGlitch2:   0x13F1A18;
+    uint screen:        0x13F175A;
+    uint warpScreen:    0x13F176A;
+}
+
+state("nintendulator")
+{
+    byte level:         0x5C0D8;
+    byte start:         0x5C47D;
+    byte start2:        0x5C47E;
+    byte complete:      0x5C0FB;
+    byte pauseComplete: 0x5C1B3;
+    byte BikeGlitch:    0x5C718;
+    byte BikeGlitch2:   0x5C3E0;
+    uint screen:        0x5C122;
+    uint warpScreen:    0x5C132;
+}
+
+state("mesen")
+{
+    byte level:         "MesenCore.dll", 0x4311838, 0x118, 0xB8, 0x90, 0x1D8, 0x08, 0x10;
+    byte start:         "MesenCore.dll", 0x4311838, 0x118, 0xB8, 0x90, 0x1D8, 0x08, 0x3B5;
+    byte start2:        "MesenCore.dll", 0x4311838, 0x118, 0xB8, 0x90, 0x1D8, 0x08, 0x3B6;
+    byte complete:      "MesenCore.dll", 0x4311838, 0x118, 0xB8, 0x90, 0x1D8, 0x08, 0x33;
+    byte pauseComplete: "MesenCore.dll", 0x4311838, 0x118, 0xB8, 0x90, 0x1D8, 0x08, 0xEB;
+    byte BikeGlitch:    "MesenCore.dll", 0x4311838, 0x118, 0xB8, 0x90, 0x1D8, 0x08, 0x650;
+    byte BikeGlitch2:   "MesenCore.dll", 0x4311838, 0x118, 0xB8, 0x90, 0x1D8, 0x08, 0x318;
+    uint screen:        "MesenCore.dll", 0x4311838, 0x118, 0xB8, 0x90, 0x1D8, 0x08, 0x5A;
+    uint warpScreen:    "MesenCore.dll", 0x4311838, 0x118, 0xB8, 0x90, 0x1D8, 0x08, 0x6A;
 }
 
 startup
@@ -117,8 +169,7 @@ split
     // Bike Glitch
     if ((current.BikeGlitch == 0x0F) && (old.BikeGlitch2 != 0x93) && (current.BikeGlitch2 == 0x93) && (current.level == 3) && (settings["warp2"])) return true;
     // Warps
-    if ((old.warp1 != 0x20) && (current.warp1 == 0x20) && (((old.warp2 != 0x05) && (current.warp2 == 0x05)) ||
-	((old.warp2 != 0x20) && (current.warp2 == 0x20))))
+    if ((old.warpScreen != 0x0F382205) && (current.warpScreen == 0x0F382205))
     {
         switch((int)current.level)
         {
@@ -148,5 +199,6 @@ reset
 
 start
 {
-    return (current.level == 0x01) && (old.start == 0x05) && (current.start == 0x04);
+    return (current.level == 0x01) && (((old.start == 0x05) && (current.start == 0x04)) ||
+    ((old.start2 == 0x05) && (current.start2 == 0x04)));
 }
