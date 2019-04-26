@@ -5,8 +5,10 @@ The autosplitter for [LiveSplit](https://github.com/LiveSplit/LiveSplit/releases
 ## Required Emulators
 - [x] FCEUX v2.2.3 [Download](http://www.fceux.com/web/download.html)
 - [x] Nestopia v1.40 [Download](http://nestopia.sourceforge.net/downloads.html)
-- [ ] BizHawk _(not supported yet)_
-- [x] Mednafen v1.21.3 _(need to test)_ [Download](https://mednafen.github.io/)
+- [x] Mednafen v1.21.3 [Download](https://mednafen.github.io/)
+- [x] Nintendulator v0.985 _(32-bit)_ [Download](https://www.qmtpro.com/~nes/nintendulator/nintendulator_bin_i386.zip)
+- [x] puNES v0.104 _(i686: Direct3D and OpenGL; x64 only Direct3D)_ [Download](https://github.com/punesemu/puNES/releases)
+- [x] Mesen v0.9.7 [Download](https://www.mesen.ca/#Downloads)
 
 ## Installing
 1. Download [ASL file](https://github.com/BroDMax/Battletoads-NES-autosplitter/archive/master.zip)
