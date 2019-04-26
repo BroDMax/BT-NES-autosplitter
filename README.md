@@ -6,7 +6,7 @@ The autosplitter for [LiveSplit](https://github.com/LiveSplit/LiveSplit/releases
 - [x] FCEUX v2.2.3 [Download](http://www.fceux.com/web/download.html)
 - [x] Nestopia v1.40 [Download](http://nestopia.sourceforge.net/downloads.html)
 - [x] Mednafen v1.21.3 [Download](https://mednafen.github.io/)
-- [x] Nintendulator v0.985 _(32-bit)_ [Download](https://www.qmtpro.com/~nes/nintendulator/nintendulator_bin_i386.zip)
+- [x] Nintendulator v0.985 _(32-bit)_ [Download](https://www.qmtpro.com/~nes/nintendulator/#downloads)
 - [x] puNES v0.104 _(i686: Direct3D and OpenGL; x64 only Direct3D)_ [Download](https://github.com/punesemu/puNES/releases)
 - [x] Mesen v0.9.7 [Download](https://www.mesen.ca/#Downloads)
 
