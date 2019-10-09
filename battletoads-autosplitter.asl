@@ -118,7 +118,7 @@ startup
 
 split
 {
-    if ((old.complete != 0x81) && (current.complete == 0x81) && (current.pauseComplete == 0x80 || current.pauseComplete == 0x81))
+    if ((old.complete != 0x81) && (current.complete == 0x81) && ((current.pauseComplete & 0xFE) == 0x80))
     {
         switch((int)current.level)
         {
@@ -160,16 +160,26 @@ split
                 break;
         }
     }
-    // The Revolution
-    if ((current.BikeGlitch == 0x0F) && (old.BikeGlitch2 != 0x93) && (current.BikeGlitch2 == 0x93) && (current.level == 5) && (settings["lvl12"])) return true;
+	
+	if ((current.BikeGlitch == 0x0F) && (old.BikeGlitch2 != 0x93) && (current.BikeGlitch2 == 0x93))
+	{
+		switch((int)current.level)
+        {
+            case 3:
+				// Bike Glitch
+                if (settings["warp2"]) return true;
+                break;
+            case 5:
+				// The Revolution
+                if (settings["lvl12"]) return true;
+                break;
+		}
+	}
+	
     // Armageddon (end game)
-    if ((old.screen == 0x0F241404) && (current.screen == 0x0F201C0C) && ((current.level == 0xFE) || (current.level == 0xFF)) && (settings["lvl13"])) return true;
-    
-    
-    // Bike Glitch
-    if ((current.BikeGlitch == 0x0F) && (old.BikeGlitch2 != 0x93) && (current.BikeGlitch2 == 0x93) && (current.level == 3) && (settings["warp2"])) return true;
+    if ((old.screen == 0x0F241404) && (current.screen == 0x0F201C0C) && ((current.level & 0xFE) == 0xFE) && (settings["lvl13"])) return true;
     // Warps
-    if ((old.warpScreen != 0x0F382205) && (current.warpScreen == 0x0F382205))
+    if (((old.warpScreen != 0x0F382205) && (current.warpScreen == 0x0F382205)) || ((old.warpScreen != 0x0F121620) && (current.warpScreen == 0x0F121620)))
     {
         switch((int)current.level)
         {
